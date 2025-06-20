@@ -1,4 +1,4 @@
-a<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -22,9 +22,13 @@ a<!DOCTYPE html>
   <!-- ==== オンライン：部屋操作パネル ==== -->
   <div id="onlinePanel">
     <div>
-      <button id="btnCreate">部屋を作る</button>　
+      <button id="btnCreate">部屋を作る</button>
       ルーム ID: <span id="roomIdDisp">---</span>
     </div>
+    <div style="margin-top:6px;">
+      プレイヤー名: <input id="playerName" type="text" placeholder="あなたの名前 (10文字以内)" maxlength="10">
+    </div>
+
     <div style="margin-top:6px;">
       <input id="joinId" type="text" placeholder="ルームID">
       <button id="btnJoin">参加</button>
@@ -47,11 +51,13 @@ a<!DOCTYPE html>
   <div id="panel">
     <div class="box">
       <h3 id="p1Name">AI 1</h3>
+      <span class="wins">Wins: <span id="p1Wins">0</span></span>
       エネルギー:<span id="pEn">0</span><br>
       残りシールド:<span id="pSh">5</span>
     </div>
     <div class="box">
       <h3 id="p2Name">AI 2</h3>
+      <span class="wins">Wins: <span id="p2Wins">0</span></span>
       エネルギー:<span id="aEn">0</span><br>
       残りシールド:<span id="aSh">5</span>
     </div>
